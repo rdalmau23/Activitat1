@@ -41,4 +41,8 @@ public class Extensio {
             System.out.println("Error al canviar l'extensió del fitxer.");
         }
     }
+
+    public static void main(String[] args) {
+        canviaExtensio();
+    }
 }

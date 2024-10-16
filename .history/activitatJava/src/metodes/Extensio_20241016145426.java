@@ -25,7 +25,7 @@ public class Extensio {
         System.out.println("Escriu la nova extensió (sense el punt). Exemple: png");
         String newExtension = scanner.nextLine();
 
-        // Obtenir el nom base del fitxer sense l'extensió actual
+        // Obtenir el nom base del fitxer (sense l'extensió actual)
         String baseName = filePath.substring(0, filePath.lastIndexOf('.'));
         
         // Crear el nou nom amb la nova extensió
@@ -40,5 +40,9 @@ public class Extensio {
         } else {
             System.out.println("Error al canviar l'extensió del fitxer.");
         }
+    }
+
+    public static void main(String[] args) {
+        canviaExtensio();
     }
 }
