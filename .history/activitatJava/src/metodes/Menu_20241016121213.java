@@ -29,7 +29,6 @@ public class Menu {
                 
                 case 4:
                     Extensio.canviaExtensio();
-                    
                 break;
 
                 case 0:

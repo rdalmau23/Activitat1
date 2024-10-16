@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Extensio {
 
-    public static void canviaExtensio() {
+    public static void changeSpecificFileExtension() {
         
         Scanner scanner = new Scanner(System.in);
         
@@ -36,7 +36,7 @@ public class Extensio {
         if (file.renameTo(renamedFile)) {
             System.out.println("Fitxer amb extensió canviada: " + fileName + " -> " + newName);
         } else {
-            System.out.println("Error");
+            System.out.println("Error.");
         }
     }
 }

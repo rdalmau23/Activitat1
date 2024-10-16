@@ -9,7 +9,6 @@ public class Menu {
         System.out.println("1. Buscar un fitxer o carpeta per nom");
         System.out.println("2. Buscar fitxer o carpeta a partir de la ruta");
         System.out.println("3. Llistar fitxers dins un directori");
-        System.out.println("4. Canvia l'extensió d'un fitxer");
         System.out.println("0. Sortir");
         
             int opcio = scanner.nextInt();
@@ -29,7 +28,6 @@ public class Menu {
                 
                 case 4:
                     Extensio.canviaExtensio();
-                    
                 break;
 
                 case 0:

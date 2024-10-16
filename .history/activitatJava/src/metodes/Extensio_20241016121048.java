@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Extensio {
 
-    public static void canviaExtensio() {
+    public static void changeSpecificFileExtension() {
         
         Scanner scanner = new Scanner(System.in);
         
