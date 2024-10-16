@@ -7,7 +7,7 @@ public class Extensio {
 
     public static void canviaExtensio() {
         
-        
+        // crear un escaner per demanar al usuari la ruta del fitxer
         Scanner scanner = new Scanner(System.in);
         
         // Demanar la ruta completa  o relativa del fitxer
@@ -17,7 +17,7 @@ public class Extensio {
         // Comprovar si existeix el fitxer i si no es aixi adverteix de l'error
         File file = new File(filePath);
         if (!file.exists()) {
-            System.out.println("El fitxer no existeix.");
+            System.out.println("El fitxer no existeix a la ruta especificada.");
             return;
         }
         
