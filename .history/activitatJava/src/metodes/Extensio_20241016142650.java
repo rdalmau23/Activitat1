@@ -7,14 +7,14 @@ public class Extensio {
 
     public static void canviaExtensio() {
         
-        // crear un escaner per demanar al usuari la ruta del fitxer
+        // Crear un escàner per demanar al usuari la ruta del fitxer
         Scanner scanner = new Scanner(System.in);
         
-        // Demanar la ruta completa  o relativa del fitxer
+        // Demanar la ruta completa o relativa del fitxer
         System.out.println("Escriu la ruta completa del fitxer amb la seva extensió actual (exemple: /home/usuari/fitxer.jpg o C:\\Users\\Usuari\\fitxer.jpg):");
         String filePath = scanner.nextLine();
         
-        // Comprovar si existeix
+        // Comprovar si el fitxer existeix
         File file = new File(filePath);
         if (!file.exists()) {
             System.out.println("El fitxer no existeix a la ruta especificada.");
@@ -31,7 +31,7 @@ public class Extensio {
         // Crear el nou nom amb la nova extensió
         String newName = baseName + "." + newExtension;
         
-        // Crear un objecte file
+        // Crear un objecte File per al fitxer renombrat
         File renamedFile = new File(newName);
         
         // Renombrar el fitxer
