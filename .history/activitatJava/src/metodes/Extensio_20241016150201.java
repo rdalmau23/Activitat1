@@ -11,7 +11,7 @@ public class Extensio {
         Scanner scanner = new Scanner(System.in);
         
         // Demanar la ruta completa  o relativa del fitxer
-        System.out.println("Escriu la ruta del fitxer:");
+        System.out.println("Escriu la ruta completa del fitxer amb la seva extensió actual (exemple: /home/usuari/fitxer.jpg o C:\\Users\\Usuari\\fitxer.jpg):");
         String filePath = scanner.nextLine();
         
         // Comprovar si existeix el fitxer i si no es aixi adverteix de l'error
