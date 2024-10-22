@@ -6,10 +6,14 @@ public class Menu {
 
     public static void mostrarMenu() {
         Scanner scanner = new Scanner(System.in);
+
+        
         String menuOpcions = MenuString.obtenerMenu();
         System.out.println(menuOpcions);
         
+        
         int opcio = scanner.nextInt();
+
         
         switch (opcio) {
             case 1:
@@ -27,10 +31,6 @@ public class Menu {
             case 4:
                 canviarExtensioFitxer();
                 break;
-                
-            case 5:
-                mostrarDirectorisPadres(); 
-                break;
 
             case 0:
                 System.out.println("Adeu siau!");
@@ -43,11 +43,8 @@ public class Menu {
 
         scanner.close();
     }
-    private static void mostrarDirectorisPadres() {
-        System.out.println("Opció: Mostrar directoris pares.");
-        DirectoriPare.mostrarDirectoris(); 
-    }
 
+    
     private static void buscarFitxerPerNom() {
         System.out.println("Opció: Buscar un fitxer per nom.");
         NomFitxer.buscarFitxer();

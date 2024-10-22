@@ -6,30 +6,35 @@ public class Menu {
 
     public static void mostrarMenu() {
         Scanner scanner = new Scanner(System.in);
-        String menuOpcions = MenuString.obtenerMenu();
+
+        // Definir el menú como un string
+        String menuOpcions = "\nTria una opció:\n" +
+                "1. Buscar un fitxer o carpeta per nom\n" +
+                "2. Buscar fitxer o carpeta a partir de la ruta\n" +
+                "3. Llistar fitxers dins un directori\n" +
+                "4. Canvia l'extensió d'un fitxer\n" +
+                "0. Sortir";
+
         System.out.println(menuOpcions);
         
         int opcio = scanner.nextInt();
-        
+
+        // Utilizar el switch solo para llamar a los métodos
         switch (opcio) {
             case 1:
-                buscarFitxerPerNom();
+                buscarFitxerPerNom(); // Método para buscar fitxer per nom
                 break;
 
             case 2:
-                buscarFitxerPerRuta();
+                buscarFitxerPerRuta(); // Método para buscar fitxer per ruta
                 break;
 
             case 3:
-                llistarFitxersEnDirectori();
+                llistarFitxersEnDirectori(); // Método para llistar fitxers
                 break;
 
             case 4:
-                canviarExtensioFitxer();
-                break;
-                
-            case 5:
-                mostrarDirectorisPadres(); 
+                canviarExtensioFitxer(); // Método para cambiar la extensión del fitxer
                 break;
 
             case 0:
@@ -40,14 +45,9 @@ public class Menu {
                 System.out.println("Opció no vàlida. Si us plau, tria una opció correcta.");
                 break;
         }
-
-        scanner.close();
-    }
-    private static void mostrarDirectorisPadres() {
-        System.out.println("Opció: Mostrar directoris pares.");
-        DirectoriPare.mostrarDirectoris(); 
     }
 
+    // Métodos con el enunciado de la opción, que llaman al método funcional
     private static void buscarFitxerPerNom() {
         System.out.println("Opció: Buscar un fitxer per nom.");
         NomFitxer.buscarFitxer();

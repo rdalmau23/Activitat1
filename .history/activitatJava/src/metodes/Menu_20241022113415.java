@@ -6,11 +6,15 @@ public class Menu {
 
     public static void mostrarMenu() {
         Scanner scanner = new Scanner(System.in);
+
+        // Obtener el string del menú desde MenuString
         String menuOpcions = MenuString.obtenerMenu();
         System.out.println(menuOpcions);
         
+        // Leer la opción elegida por el usuario
         int opcio = scanner.nextInt();
         
+        // Controlar las opciones del menú
         switch (opcio) {
             case 1:
                 buscarFitxerPerNom();
@@ -29,7 +33,7 @@ public class Menu {
                 break;
                 
             case 5:
-                mostrarDirectorisPadres(); 
+                mostrarDirectorisPadres(); // Nuevo caso para mostrar directorios padres
                 break;
 
             case 0:
@@ -43,9 +47,11 @@ public class Menu {
 
         scanner.close();
     }
+
+    // Método para llamar al método de la clase DirectoriPare
     private static void mostrarDirectorisPadres() {
         System.out.println("Opció: Mostrar directoris pares.");
-        DirectoriPare.mostrarDirectoris(); 
+        DirectoriPare.mostrarDirectoris(); // Llamada al método que muestra los padres del directorio
     }
 
     private static void buscarFitxerPerNom() {

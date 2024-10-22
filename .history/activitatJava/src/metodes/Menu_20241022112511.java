@@ -2,15 +2,19 @@ package metodes;
 
 import java.util.Scanner;
 
-public class Menu {
+public class MenuSwitch {
 
     public static void mostrarMenu() {
         Scanner scanner = new Scanner(System.in);
+
+        // Obtener el menú desde la clase MenuString
         String menuOpcions = MenuString.obtenerMenu();
         System.out.println(menuOpcions);
         
+        // Leer la opción ingresada por el usuario
         int opcio = scanner.nextInt();
-        
+
+        // Utilizar el switch para llamar a los métodos correspondientes
         switch (opcio) {
             case 1:
                 buscarFitxerPerNom();
@@ -27,10 +31,6 @@ public class Menu {
             case 4:
                 canviarExtensioFitxer();
                 break;
-                
-            case 5:
-                mostrarDirectorisPadres(); 
-                break;
 
             case 0:
                 System.out.println("Adeu siau!");
@@ -43,11 +43,8 @@ public class Menu {
 
         scanner.close();
     }
-    private static void mostrarDirectorisPadres() {
-        System.out.println("Opció: Mostrar directoris pares.");
-        DirectoriPare.mostrarDirectoris(); 
-    }
 
+    // Métodos que llaman a las funcionalidades
     private static void buscarFitxerPerNom() {
         System.out.println("Opció: Buscar un fitxer per nom.");
         NomFitxer.buscarFitxer();
